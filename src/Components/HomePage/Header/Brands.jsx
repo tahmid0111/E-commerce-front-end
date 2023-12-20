@@ -13,7 +13,7 @@ const Brands = () => {
 
   }, [])
   return (
-    <div className='grid grid-cols-12 px-5 my-10'>
+    <div className='grid grid-cols-12 px-5 my-10 bg-pink-300'>
       {
         brands.map((item, i) => <SingleBrand key={i} item={item} />)
       }
