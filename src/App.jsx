@@ -4,6 +4,7 @@ import HomePage from "./Pages/HomePage"
 import ProfilePage from "./Pages/ProfilePage"
 import CartPage from "./Pages/CartPage"
 import FavouratesPage from "./Pages/FavouratesPage"
+import RegistrationPage from "./Pages/RegistrationPage"
 
 function App() {
 
@@ -15,7 +16,7 @@ function App() {
 
           <Route path="/" element={<HomePage />} />
 
-          <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/profile" element={<RegistrationPage />} />
 
           <Route path="/cart" element={<CartPage />} />
 
