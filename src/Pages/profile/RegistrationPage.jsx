@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useState } from "react";
 // import { FormControl, Label, Input, Button, Group } from "daisyui";
 
@@ -7,7 +8,6 @@ function RegistrationPage() {
     LastName: "",
     Email: "",
     Password: "",
-    ConfirmPassword: "",
     Phone: {
       Phone1: "017",
       Phone2: "017",
@@ -18,6 +18,12 @@ function RegistrationPage() {
     PostCode: "",
     HouseNo: "",
   });
+
+  // getting the confirm password
+  const [confirmPass, setConfirmPass] = useState('')
+  const handleChange2 = (event) => {
+    setConfirmPass(event.target.value)
+  }
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -40,26 +46,23 @@ function RegistrationPage() {
       }));
     };
   };
-  
 
-//   const handleNextClick = () => {
-//     setFormData({
-//       ...formData,
-//       currentSection: 2,
-//     });
-//   };
-
-//   const handleRegisterClick = () => {
-//     // Handle registration logic here
-//     console.log(formData);
-//   };
-
-const handleSubmit = () => {}
+const handleSubmit = (event) => {
+  event.preventDefault();
+      // Check if the password and confirm password match
+      if (formData.Password !== confirmPass) {
+        console.log('Passwords do not match');
+      }else{
+      // Proceed with your form submission logic if passwords match
+      axios.post('http://localhost:8080/user/api/v1/registeruser', formData)
+      console.log(formData);
+      }
+}
 
   return (
     <div className="bg-yellow-500 py-10 px-4 bg-center bg-cover" style={{backgroundImage: 'url("/bg-05.jpg")'}}>
       <form
-        className="mx-auto max-w-lg p-8 bg-white rounded-lg shadow-md grid grid-cols-12"
+        className="mx-auto max-w-3xl p-8 bg-white rounded-lg shadow-md grid grid-cols-12"
         onSubmit={handleSubmit}>
         <h2 className="text-2xl font-bold text-center mb-6 col-span-12">Registration</h2>
 
@@ -104,7 +107,7 @@ const handleSubmit = () => {}
             value={formData.Email}
             onChange={handleChange}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-500 focus:ring-opacity-50"
-            placeholder="email"
+            placeholder="enter your email"
             required
           />
         </div>
@@ -131,8 +134,8 @@ const handleSubmit = () => {}
             type="password"
             id="ConfirmPassword"
             name="ConfirmPassword"
-            value={formData.ConfirmPassword}
-            onChange={handleChange}
+            value={confirmPass}
+            onChange={handleChange2}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-500 focus:ring-opacity-50"
             placeholder="confirm password"
             required
@@ -150,7 +153,6 @@ const handleSubmit = () => {}
             onChange={handleChange}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-500 focus:ring-opacity-50"
             placeholder="phone"
-            showStepper={false}
             required
           />
         </div>
@@ -166,7 +168,6 @@ const handleSubmit = () => {}
             onChange={handleChange}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-500 focus:ring-opacity-50"
             placeholder="phone"
-            required
           />
         </div>
         <div className="mb-4 mx-2 col-span-6">
