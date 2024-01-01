@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { setToken } from "../../helper/tokenHelper";
 
 function LoginPage() {
@@ -10,7 +10,7 @@ function LoginPage() {
     Email: "",
     Password: ""
   });
-
+``
   const handleChange = (event) => {
     const { name, value } = event.target;
 
@@ -46,7 +46,7 @@ const handleSubmit = async(event) => {
       <form
         className="mx-auto max-w-xl p-8 bg-white rounded-lg shadow-md grid grid-cols-12"
         onSubmit={handleSubmit}>
-        <h2 className="text-2xl font-bold text-center mb-6 col-span-12">Registration</h2>
+        <h2 className="text-2xl font-bold text-center mb-6 col-span-12">Log In</h2>
 
         <div className="mb-4 mx-2 col-span-12">
           <label htmlFor="FirstName" className="block text-gray-700 font-bold mb-2">
@@ -79,12 +79,26 @@ const handleSubmit = async(event) => {
           />
         </div>
 
-        <div className="col-span-6">
+        <div className="col-span-12 text-center">
         <button
           type="submit"
           className="w-full py-3 bg-sky-600 text-white rounded-md hover:bg-sky-700 focus:outline-none focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
           Login
         </button>
+        </div>
+
+        <div className="col-span-12 text-center pt-5 pb-2">
+        <p className="font-bold">Don't have an account</p>
+        </div>
+
+        <div className="col-span-12 text-center">
+          <Link to="/registration">
+            <button
+              type="submit"
+              className="w-full py-3 bg-yellow-500 text-white rounded-md hover:bg-yellow-600 focus:outline-none focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+              Register
+            </button>
+          </Link>
         </div>
 {/* 
         <div className="col-span-6">

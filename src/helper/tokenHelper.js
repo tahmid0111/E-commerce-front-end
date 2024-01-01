@@ -11,7 +11,7 @@ export const getToken = () => {
 // this is for clearing the sessionStorage
 export const logout = () => {
     sessionStorage.clear()
-    window.location.href = '/loginuser';
+    window.location.href = '/login';
 }
 
 // setting the email to the sessionStorage

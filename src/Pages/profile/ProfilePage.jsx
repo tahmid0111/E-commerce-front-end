@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { getToken } from '../../helper/tokenHelper'
+import { getToken, logout } from '../../helper/tokenHelper'
 import axios from 'axios'
 
 const ProfilePage = () => {
@@ -39,6 +39,7 @@ const ProfilePage = () => {
       <h1>{_id}</h1>
       <h1>{Country}</h1>
       <h1>{Phone?.Phone1}</h1>
+      <button onClick={() => logout()} className='btn btn-danger'>logout</button>
     </div>
   )
 }
