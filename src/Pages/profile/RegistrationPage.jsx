@@ -1,8 +1,10 @@
 import axios from "axios";
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 // import { FormControl, Label, Input, Button, Group } from "daisyui";
 
 function RegistrationPage() {
+  let navigate = useNavigate()
   const [formData, setFormData] = useState({
     FirstName: "",
     LastName: "",
@@ -55,7 +57,7 @@ const handleSubmit = (event) => {
       }else{
       // Proceed with your form submission logic if passwords match
       axios.post('http://localhost:8080/user/api/v1/registeruser', formData)
-      console.log(formData);
+      navigate('/login')
       }
 }
 

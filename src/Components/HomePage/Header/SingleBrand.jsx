@@ -12,7 +12,7 @@ const SingleBrand = (props) => {
             <img
               src={BrandImg}
               alt=""
-              className="opacity-80 hover:scale-125 duration-200 w-full"
+              className="opacity-80 hover:scale-125 duration-200 w-full h-[180px]"
             />
 
             <h1 className="absolute bottom-0 text-center text-xl text-white font-bold bg-black w-[100px] py-2 rounded-t-xl">

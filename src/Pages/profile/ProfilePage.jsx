@@ -32,8 +32,7 @@ const ProfilePage = () => {
 
   return (
     <div>
-      <h1>{FirstName}</h1>
-      <h1>{LastName}</h1>
+      <h1>{FirstName} {LastName}</h1>
       <h1>{Email}</h1>
       <h1>{Password}</h1>
       <h1>{_id}</h1>
