@@ -3,18 +3,17 @@ import Navbar from './Navbar'
 import SearchBar from './SearchBar'
 import Brands from './Brands'
 
-import AnimatedCursor from "react-animated-cursor"
 
 
 const Header = () => {
   return (
-    <div className='bg-pink-300'>
+    <div className=''>
 
       <Navbar />
 
-      <SearchBar />
+      {/* <SearchBar /> */}
 
-      <Brands />
+      {/* <Brands /> */}
 
     </div>
   )
