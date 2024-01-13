@@ -1,10 +1,11 @@
 import React from 'react'
+import Layout from '../Layout/Layout'
 
 const FavouratesPage = () => {
   return (
-    <div>
+    <Layout>
       
-    </div>
+    </Layout>
   )
 }
 

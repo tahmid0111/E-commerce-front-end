@@ -1,5 +1,5 @@
 
-import Navbar from '../../Components/HomePage/Header/Navbar'
+import Navbar from '../../Components/Shared/Navbar'
 import MyProfile from '../../Components/ProfilePage/MyProfile'
 
 const ProfilePage = () => {

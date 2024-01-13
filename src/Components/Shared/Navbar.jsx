@@ -4,7 +4,7 @@ import { HiHeart } from "react-icons/hi2";
 import { FaAlignJustify, FaCartShopping, FaUserTie } from "react-icons/fa6";
 
 import { useEffect, useState } from "react";
-import { getToken } from "../../../helper/tokenHelper";
+import { getToken } from "../../helper/tokenHelper";
 const Navbar = () => {
   const [token, setToken] = useState(null);
 
