@@ -6,7 +6,7 @@ const Brands = () => {
 
 
   useEffect(() => {
-    fetch("http://localhost:8080/product/api/v1/allbrand")
+    fetch("http://localhost:8080/product/api/v1/allbrands")
     .then((res) => res.json())
     .then((data) => setBrands(data.data));
   }, [])
