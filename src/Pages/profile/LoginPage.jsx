@@ -42,7 +42,7 @@ const handleSubmit = async(event) => {
 }
 
   return (
-    <div className="bg-yellow-500 py-10 px-4 bg-center bg-cover h-[700px]" style={{backgroundImage: 'url("/bg-05.jpg")'}}>
+    <div className="bg-yellow-500 py-10 px-4 bg-center bg-cover h-screen" style={{backgroundImage: 'url("/bg-05.jpg")'}}>
       <form
         className="mx-auto max-w-xl p-8 bg-white rounded-lg shadow-md grid grid-cols-12"
         onSubmit={handleSubmit}>
@@ -96,7 +96,7 @@ const handleSubmit = async(event) => {
             <button
               type="submit"
               className="w-full py-3 bg-yellow-500 text-white rounded-md hover:bg-yellow-600 focus:outline-none focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
-              Register
+              Create New Account
             </button>
           </Link>
         </div>

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const SingleBrand = (props) => {
   const { _id, BrandName, BrandImg } = props.item;
   return (
-    <div className="col-span-12 md:col-span-6 lg:col-span-3 px-5">
+    <div className="basis-1/4 px-5">
       <Link to={`/searchbybrand/${_id}`}>
 
         <div className="relative border-4 overflow-hidden rounded-lg my-5">

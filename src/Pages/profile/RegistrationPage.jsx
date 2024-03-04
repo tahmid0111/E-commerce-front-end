@@ -250,7 +250,7 @@ const handleSubmit = (event) => {
         <button
           type="submit"
           className="w-full py-3 bg-sky-600 text-white rounded-md hover:bg-sky-700 focus:outline-none focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
-          Submit
+          Register
         </button>
         </div>
       </form>

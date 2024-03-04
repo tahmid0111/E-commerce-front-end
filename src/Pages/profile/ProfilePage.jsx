@@ -1,13 +1,11 @@
-
-import Navbar from '../../Components/Shared/Navbar'
 import MyProfile from '../../Components/ProfilePage/MyProfile'
+import Layout from './../../Layout/Layout';
 
 const ProfilePage = () => {
   return (
-    <div>
-      <Navbar />
+    <Layout>
       <MyProfile />
-    </div>
+    </Layout>
   )
 }
 
