@@ -19,7 +19,7 @@ const Navbar = () => {
         <div className="col-span-4 mx-auto">
           <Link to="/">
             <img
-              src="logo.png"
+              src="/public/logo.png"
               alt="logo"
               className="w-[100px] md:w-[100px] lg:w-[100px]"
             />
